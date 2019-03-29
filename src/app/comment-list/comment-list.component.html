@@ -1,0 +1,8 @@
+<app-new-comment (newCommentEvent)="handleNewComment($event)"></app-new-comment>
+<!--collecting the data from child component (data put in the input fields of child component)-->
+<ul>
+    <app-comment (click)="onEdit(comment)"  *ngFor="let comment of list; let index=index; let odd=odd"
+    [comment]="comment" [odd]="odd" [index]="index" (commentDeleteEvent)=handleCommentDelete($event)></app-comment>
+<!--sending the info of the child component (info generated from ngFor (single comment object, odd, index no.)) --> 
+<!--collecting the data from child component (data put in the input fields of child component)-->
+</ul>

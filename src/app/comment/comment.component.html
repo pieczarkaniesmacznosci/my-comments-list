@@ -1,0 +1,13 @@
+  <li 
+      [ngStyle]="{'backgroundColor':odd?'green':'lightblue'}">
+      <h2>{{index+1}}  {{comment.name|uppercase}}</h2>
+      <p [hidden]="comment.isHidden">{{comment.message}}</p>
+      <button class="btn btn-primary"
+      (click)="comment.isHidden=!comment.isHidden"
+      [hidden]>Wyświetl
+    </button>
+    <button class="btn btn-danger"
+      (click)="onDelete(comment.id)"
+      >Usuń
+    </button>
+  </li>

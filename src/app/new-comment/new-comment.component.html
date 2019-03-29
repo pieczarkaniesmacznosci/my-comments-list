@@ -1,0 +1,11 @@
+<h3>Podaj swój komentarz</h3><!-- marking the data with # to assig alias of the data contained in the input-->
+<div>
+    <form #form="ngForm" autocomplete="off">
+        <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
+        <input name="name" #name="ngModel" [(ngModel)]="service.formData.name" class="form-control" placeholder="Name" required>
+        <input name="message" #message="ngModel" [(ngModel)]="service.formData.message" class="form-control" placeholder="Message" required>
+        <!-- #constName="ngModel" -przekazanie nazwy zmiennej  -->
+        <br><!--the way to send info with values of input to the function-->
+        <button class="btn-primary" (click)="onSubmit(form)">Add comment</button>
+    </form>
+</div>
